@@ -30,16 +30,18 @@
 					<p>Buscador para todos.</p>
 				<ul class="actions special">
 					<li>
-						<div class="field" id="searchform">
-  							<input type="text"  id="searchterm" placeholder="¿Que quieres buscar?" />
-  						</div>
+						<form action="" method="get">
+							<div class="field" id="searchform">
+								<input type="text"  id="searchterm" placeholder="¿Que quieres buscar?" />
+							</div>
+						</form>
   					</li>
   				</ul>
   			<ul class="actions special">
   				<div class="field" id="searchform">
 
   				  	<li>
-  						<button class="button primary" id="search">Busca ya!</button>
+  						<button class="button primary" onclick="wsearch()" id="search">Busca ya!</button>
   					</li>
   			    </div>
   			</ul>
@@ -87,6 +89,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="api.js"></script>
 
 	</body>
 </html>
