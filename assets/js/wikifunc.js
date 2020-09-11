@@ -19,16 +19,16 @@ function busca(){
       let jSearch=data.query.search;
       resultados.innerHTML="";
 
-      let tabla = "<table><tr><th>Numero de Pagina</th><th>Titulo</th><th>Resumen</th></tr>";
+      let tabla = "<table id='tablaResultados'><tr><th>Numero de Pagina</th><th>Titulo</th><th>Resumen</th></tr><tbody id='bodyTabla'>";
     	console.log(data);
       $.each( jSearch, function( i, item ) {
         //$( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
         let pageId=item.pageid;
         let title=item.title;
         let snippet=item.snippet;
-        tabla += "<tr><td>"+pageId+"</td><td>"+title+"</td><td>"+snippet+"</td></tr>";
+        tabla += "<tr id='tr"+i+"'><td id='tr"+i+"td1'>"+pageId+"</td><td>"+title+"</td><td>"+snippet+"</td></tr>";
       });/**/
-      tabla += "</table>";
+      tabla += "</tbody></table>";
       resultados.innerHTML= tabla ; 
     })
     .fail(function() {
