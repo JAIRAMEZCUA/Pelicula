@@ -2,7 +2,7 @@
 var webdriver = require('selenium-webdriver');
 var browser = new webdriver.Builder().usingServer().withCapabilities({ 'browserName': 'chrome' }).build();
 //browser.get('https://jairamezcua.github.io/Pelicula/');
-browser.get('C:/Users/dell/Desktop/kmmx/final/Pelicula/index.html');
+browser.get('https://jairamezcua.github.io/Pelicula/index.html');
 browser.findElement(webdriver.By.id('searchterm')).sendKeys('hola');
 browser.findElement(webdriver.By.id('search')).click();
 
